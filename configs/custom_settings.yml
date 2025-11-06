@@ -10,5 +10,5 @@ ui:
   appNameNavbar: 'PDF Magic' # name displayed on the navigation bar
   languages: [it_IT] # If empty, all languages are enabled. To display only German and Polish ["de_DE", "pl_PL"]. British English is always enabled.
 endpoints:
-  toRemove: [] # List endpoints to disable (e.g. ['img-to-pdf', 'remove-pages'])
+  toRemove: ['cbr-to-pdf', 'cbz-to-pdf', 'sign', 'cert-sign'] # List endpoints to disable (e.g. ['img-to-pdf', 'remove-pages'])
   groupsToRemove: ['LibreOffice'] # List groups to disable (e.g. ['LibreOffice'])
