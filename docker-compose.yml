@@ -3,13 +3,20 @@ services:
     stirling-pdf:
       image: docker.stirlingpdf.com/stirlingtools/stirling-pdf:latest
       ports:
-        - '127.0.0.1:8080:8080'
+        - '127.0.0.1:8480:8080'
       volumes:
-        - ./StirlingPDF/trainingData:/usr/share/tessdata # Required for extra OCR languages
-        - ./StirlingPDF/extraConfigs:/configs
-        - ./StirlingPDF/customFiles:/customFiles/
-        - ./StirlingPDF/logs:/logs/
-        - ./StirlingPDF/pipeline:/pipeline/
+        - trainingdata:/usr/share/tessdata # Required for extra OCR languages
+        - configs:/configs
+        - customfiles:/customFiles/
+        - logs:/logs/
+        - pipelines:/pipeline/
       environment:
         - DISABLE_ADDITIONAL_FEATURES=true
         - LANGS=it_IT
+
+volumes:
+  configs:
+  logs:
+  pipelines:
+  trainingdata:
+  customfiles:
