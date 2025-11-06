@@ -6,7 +6,7 @@ services:
         - '127.0.0.1:8480:8080'
       volumes:
         - trainingdata:/usr/share/tessdata # Required for extra OCR languages
-        - configs:/configs
+        - ./configs:/configs
         - customfiles:/customFiles/
         - logs:/logs/
         - pipelines:/pipeline/
@@ -15,7 +15,6 @@ services:
         - LANGS=it_IT
 
 volumes:
-  configs:
   logs:
   pipelines:
   trainingdata:
