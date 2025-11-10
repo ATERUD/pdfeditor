@@ -11,4 +11,4 @@ ui:
   languages: [it_IT] # If empty, all languages are enabled. To display only German and Polish ["de_DE", "pl_PL"]. British English is always enabled.
 endpoints:
   toRemove: ['cbr-to-pdf', 'cbz-to-pdf', 'sign', 'cert-sign', 'validate-signature', 'pdf-to-cbz'] # List endpoints to disable (e.g. ['img-to-pdf', 'remove-pages'])
-  groupsToRemove: ['LibreOffice'] # List groups to disable (e.g. ['LibreOffice'])
+  groupsToRemove: [] # List groups to disable (e.g. ['LibreOffice'])
