@@ -13,6 +13,7 @@ services:
       environment:
         - DISABLE_ADDITIONAL_FEATURES=false
         - LANGS=it_IT
+      restart: unless-stopped
 
 volumes:
   logs:
